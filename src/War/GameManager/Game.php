@@ -99,10 +99,6 @@ class Game {
       print "----- Vez de " . $attackingCountry->getName() . "\n";
       $defendingCountry = NULL;
       if ($attackingCountry instanceof ComputerPlayerCountry) {
-        print "Países Vizinhos:\n";
-        foreach($attackingCountry->getNeighbors() as $element){
-          print " ".$element->getName()."\n";
-        }
         $defendingCountry = $attackingCountry->chooseToAttack();
       }
       elseif ($attackingCountry instanceof HumanPlayerCountry) {
